@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressive Form Design</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(120deg, rgba(70, 40, 70, 0.8), rgba(10, 30, 50, 0.9));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form {
+            background-color: rgba(30, 30, 30, 0.85);
+            padding: 30px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 20px rgba(51, 30, 30, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .form:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #E0E0E0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
+        .form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #E0E0E0;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .form input[type="text"],
+        .form input[type="password"],
+        .form input[type="email"],
+        .form button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 2px solid #4D4D4D;
+            transition: all 0.3s ease;
+        }
+
+        .form input[type="text"],
+        .form input[type="password"],
+        .form input[type="email"] {
+            background-color: #333;
+            color: #E0E0E0;
+            border-color: #555;
+        }
+
+        .form input[type="text"]:focus,
+        .form input[type="password"]:focus,
+        .form input[type="email"]:focus {
+            background-color: #444;
+            border-color: #F44336;
+            outline: none;
+        }
+
+        .form input:focus + label,
+        .form input:focus-within + label {
+            color: #F44336;
+        }
+
+        .form button {
+            background-color: #F44336;
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: none;
+        }
+
+        .form button:hover {
+            background-color: #D32F2F;
+            transform: translateY(-3px);
+        }
+
+        .form p {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #B0B0B0;
+        }
+
+        .form p a {
+            color: #E0E0E0;
+            text-decoration: none;
+        }
+
+        .form p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h1>Sign Up</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p>Already have an account? <a href="#">Login here</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Developing IFrame Port</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                background-color: black;
+                color: antiquewhite;
+                padding: 18px;
+            }
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+            .gal-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 15px;
+                padding: 20px;
+                max-width: 100%;
+                margin: auto;
+            }
+            .iFrame-container {
+                width: 100%;
+                height: 150%;
+                border: 5px solid #fff;
+            }
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+            a {
+                display: inline-block;
+                margin-top: 20px;
+                font-size: 1.2rem;
+                color: #00ff00;
+                text-decoration: none;
+                background-color: #222;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+            a:hover {
+                color: #fff;
+                background-color: #00ff00;
+            }
+            @media (max-width: 760px) {
+                .gal-container {
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Interactive IFrame Page</h1>
+        <div class="container">
+            <div class="IFrame-container">
+                <iframe src="data:image/jpeg;base64,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" title="Image"></iframe>
+            </div>
+            <div class="IFrame-container">
+                <iframe src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQwBWXfohx3JwcNJr_mbHyV8oGP3quDS3FwA&s" title="Mountain"></iframe>
+            </div>
+        </div>
+        <h2>google map Iframe</h2>
+        <div class="IFrame-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4049.8150314177246!2d77.05788516636237!3d10.827907749241824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba84ee37569ae7f%3A0x3c5b1824b6e79192!2sSri%20Eshwar%20College%20of%20Engineering%2C%20Coimbatore!5e1!3m2!1sen!2sin!4v1736223278327!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h2>youtube video iframe</h2>
+        <div class="IFrame-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2g9zQp0jruM?si=htrkuT8Q8telDwAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
+        </div>
+    </body>
+</html>
